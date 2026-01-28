@@ -1,5 +1,10 @@
+import { Suspense } from 'react';
 import AppLayout from '@/components/app-layout';
 
 export default function Home() {
-  return <AppLayout />;
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <AppLayout />
+    </Suspense>
+  );
 }
